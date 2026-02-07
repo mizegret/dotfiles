@@ -1,0 +1,61 @@
+[include]
+	path = ~/.gitconfig.local
+[init]
+	defaultBranch = main
+[core]
+	askPass = 
+	editor = nvim
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[alias]
+	a  = add
+	aa = add -A
+	ap = add -p
+	b  = branch -vv
+	br = branch
+	bd = branch -d
+	ch = checkout
+	cb = checkout -b
+	sw = switch
+	swc = switch -c
+	l  = log 	
+	lf = log --follow -p --
+	last = log -1 HEAD
+	lg = log --graph --abbrev-commit --decorate --date=relative \
+		--format='%C(auto)%h %C(bold blue)%ad%C(reset) %C(white)%s %C(blue)<%an>%C(reset) %C(dim yellow)%d' --all
+	who = shortlog -sn
+	nb = switch -c
+	d  = diff
+	ds = diff --staged
+	dc = diff --cached
+	dw = diff --word-diff
+	cm     = commit -m
+	ca     = commit -a -m
+	amend  = commit --amend --no-edit
+	amendm = commit --amend -m
+	gl     = config --global --list
+	f = fetch
+	fp = fetch --prune
+	ft = fetch --tags
+	p = push
+	pf = push -f
+	pl = pull 
+	rb  = rebase
+	rbi = rebase -i
+	rba = rebase -i --autosquash
+	s = stash
+	sa = stash apply
+	sp = stash pop
+	sl = stash list
+	wip    = commit -m "WIP"
+	st = status
+	w  = worktree
+	wa = worktree add
+	wl = worktree list
+	wm = worktree move
+	wr = worktree remove
+	wp = worktree prune
